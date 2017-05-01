@@ -1,6 +1,6 @@
 # ChromaPy
 
-ChromaPy is a small ChromaSDK Extension for Python.
+ChromaPy is a small ChromaSDK Extension for Python[Windows].
 
 Usage
 --------
@@ -13,6 +13,22 @@ RED = (255,0,0)
 Chroma.setColor(RED) 
 ```
 For further information take a look at the wiki of this repo. You can also find multiple examples in the "Example Script"-directory.
+
+Supported Devices
+--------
+Razer devices:
+* Keyboard
+* Keypad
+* Mouse
+* Mousepad
+* Headset
+* Systems
+
+SmartHome:
+* Xiaomi Yeelight
+
+more comming soon.
+
 
 
 Building
@@ -27,9 +43,13 @@ Dependencies
 
 ChromaPy depends on the "Razer Chroma SDK", "SFML-Library" and "JSON for Modern C++".
 
-The "Razer Chroma SDK" is provided by Razer and [can be found on their Website][rzdev].
-The "SFML-Library" is provided by Laurent Gomila and [can be found on his Website][sfml].
-"JSON for Modern C++" is provided by Niels Lohmann and [can be found on his Repo][nloh].
+The "Razer Chroma SDK" is provided by Razer and can be found on their [Website][rzdev].
+
+
+The "SFML-Library" is provided by Laurent Gomila and can be found on his [Website][sfml].
+
+
+"JSON for Modern C++" is provided by Niels Lohmann and can be found on his [Repo][nloh].
 
 
 License
@@ -37,14 +57,16 @@ License
 
 Copyright &copy; 2017 by [Tim Gebauer][vaypron].
 
+
 This project is licensed under the MIT license, please see the file **LICENSE** for more information.
+
 
 Razer is a trademark and/or a registered trademark of Razer USA Ltd.  
 All other trademarks are property of their respective owners.
 
-The "SFML-Library" is provided under the [zlib/libpng License][zlib].
+The "SFML-Library" is licensed under the [zlib/libpng License][zlib].
 
-"JSON for Modern C++" is provided under the [MIT License][mit].
+"JSON for Modern C++" is licensed under the [MIT License][mit].
 
 
 
@@ -59,4 +81,4 @@ The "SFML-Library" is provided under the [zlib/libpng License][zlib].
 [zlib]: https://www.sfml-dev.org/license.php
 [sfml]: https://www.sfml-dev.org/index.php
 [nloh]: https://github.com/nlohmann/json
-[insider]: https://insider.razerzone.com/index.php?threads/beta-release-chromapy-python-extension-for-the-chroma-sdk-windows.18938/#post-324752
+[insider]: https://insider.razerzone.com/index.php?threads/beta-release-chromapy-python-extension-for-the-chroma-sdk-windows.18938
