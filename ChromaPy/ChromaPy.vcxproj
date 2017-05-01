@@ -22,7 +22,7 @@
     <ProjectGuid>{684A795F-4A20-4D41-9751-6E0DFFFC5178}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>ChromaPy</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -48,7 +48,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -83,8 +83,8 @@
     <LinkIncremental>true</LinkIncremental>
     <TargetExt>.pyd</TargetExt>
     <TargetName>$(ProjectName)_d</TargetName>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Piotr\Anaconda3\envs\vis\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Piotr\Anaconda3\envs\vis\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -96,8 +96,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <TargetExt>.pyd</TargetExt>
-    <IncludePath>$(IncludePath)</IncludePath>
-    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IncludePath>$(USERPROFILE)\Anaconda3\envs\vis\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(USERPROFILE)\Anaconda3\envs\vis\libs;$(LibraryPath)</LibraryPath>
     <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -162,21 +162,16 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>SFML_STATIC;NDEBUG;_WINDOWS;_USRDLL;CHROMAPY32_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CHROMAPY32_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\ChromaPy\3rd Party\ChromaSDK;$(SolutionDir)\ChromaPy\3rd Party\nlohmann;$(SolutionDir)\ChromaPy\Yeelight;$(SolutionDir)\ChromaPy\3rd Party\SFML 64bit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\ChromaPy\3rd Party\ChromaSDK;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)\ChromaPy\3rd Party\SFML 64bit\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-network-s.lib;sfml-system-s.lib;ws2_32.lib;sfml-network-s.lib;sfml-system-s.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="ChromaSDK\RzChromaSDKDefines.h" />
-    <ClInclude Include="ChromaSDK\RzChromaSDKTypes.h" />
-    <ClInclude Include="ChromaSDK\RzErrors.h" />
     <ClInclude Include="Header\ChromaSDK.h" />
     <ClInclude Include="Header\Doc.h" />
     <ClInclude Include="Header\Headset.h" />
@@ -185,8 +180,6 @@
     <ClInclude Include="Header\Keypad.h" />
     <ClInclude Include="Header\Mouse.h" />
     <ClInclude Include="Header\Mousepad.h" />
-    <ClInclude Include="Header\Smart Home.h" />
-    <ClInclude Include="Yeelight\Yeelight.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ChromaSDK.cpp" />
@@ -195,9 +188,7 @@
     <ClCompile Include="Keypad.cpp" />
     <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="Mousepad.cpp" />
-    <ClCompile Include="Smart Home.cpp" />
     <ClCompile Include="Source.cpp" />
-    <ClCompile Include="Yeelight\Yeelight.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

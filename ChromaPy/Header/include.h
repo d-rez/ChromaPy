@@ -14,5 +14,4 @@
 #include "RzChromaSDKDefines.h"
 #include "RzChromaSDKTypes.h"
 #include "RzErrors.h"
-#include "Yeelight.h"
 using namespace std;
