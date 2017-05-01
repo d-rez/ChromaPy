@@ -24,13 +24,6 @@ Razer devices:
 * Headset
 * Systems
 
-SmartHome:
-* Xiaomi Yeelight
-
-more comming soon.
-
-
-
 Building
 --------
 
@@ -41,21 +34,15 @@ A compiled version of ChromaPy for Python 3.6 can be found on the official [Insi
 Dependencies
 ------------
 
-ChromaPy depends on the "Razer Chroma SDK", "SFML-Library" and "JSON for Modern C++".
+ChromaPy depends on the "Razer Chroma SDK".
 
 The "Razer Chroma SDK" is provided by Razer and can be found on their [Website][rzdev].
-
-
-The "SFML-Library" is provided by Laurent Gomila and can be found on his [Website][sfml].
-
-
-"JSON for Modern C++" is provided by Niels Lohmann and can be found on his [Repo][nloh].
-
 
 License
 -------
 
 Copyright &copy; 2017 by [Tim Gebauer][vaypron].
+Patching, updating and picking cherries by [d-rez][d-rez]
 
 
 This project is licensed under the MIT license, please see the file **LICENSE** for more information.
@@ -64,21 +51,9 @@ This project is licensed under the MIT license, please see the file **LICENSE** 
 Razer is a trademark and/or a registered trademark of Razer USA Ltd.  
 All other trademarks are property of their respective owners.
 
-The "SFML-Library" is licensed under the [zlib/libpng License][zlib].
-
-"JSON for Modern C++" is licensed under the [MIT License][mit].
-
-
-
-
-
-
-
 
 [vaypron]: https://github.com/Vaypron
+[d-rez]: https://github.com/d-rez
 [rzdev]: http://developer.razerzone.com/chroma
 [mit]: https://github.com/nlohmann/json/blob/develop/LICENSE.MIT
-[zlib]: https://www.sfml-dev.org/license.php
-[sfml]: https://www.sfml-dev.org/index.php
-[nloh]: https://github.com/nlohmann/json
 [insider]: https://insider.razerzone.com/index.php?threads/beta-release-chromapy-python-extension-for-the-chroma-sdk-windows.18938
